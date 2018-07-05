@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="application-name" content="GitHub Points">
+  <meta name="apple-mobile-web-app-title" content="GitHub Points">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>GitHub Points</title>
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  
+  <!-- Materialize.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
+  <style>
+    html, body { padding: 0; margin: 0; background-color: #4c5c9b; color: #f1f1f1; }
+    .container { width: 500px; padding: 0 30px; }
+    .container .title { margin-bottom: 20px; }
+    .container .title .small { font-size: 13px; }
+    .collection { color: #111; font-size: 17px; margin-bottom: 20px; }
+    .collection .switch label { vertical-align: bottom !important; }
+    .collection .switch .lever { vertical-align: initial !important; }
+    .footer { margin-bottom: 20px; text-align: right; }
+    .switch label input[type=checkbox]:checked+.lever {
+      background-color: #fa3;
+    }
+    .switch label input[type=checkbox]:checked+.lever:after {
+      background-color: #f93;
+    }
+    .cmd { background-color: #ddd; border-radius: 2px; padding: 1px 2px; color: #111; }
+    blockquote { padding-left: 0.5rem; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h5 class="title"><img src="github-points-icon-24.png" alt="logo"> GitHub Points <span class="small">β</span></h5>
+
+    <ul class="collection">
+      <li class="collection-item">
+        Hide Point Badges
+        <span class="secondary-content">
+          <div class="switch">
+            <label>
+              SHOW
+              <input type="checkbox" id="hide_point_badges">
+              <span class="lever"></span>
+              HIDE
+            </label>
+          </div>
+        </span>
+      </li>
+
+      <li class="collection-item">
+        Hide Point Summary
+        <span class="secondary-content">
+          <div class="switch">
+            <label>
+              SHOW
+              <input type="checkbox" id="hide_point_summary">
+              <span class="lever"></span>
+              HIDE
+            </label>
+          </div>
+        </span>
+      </li>
+    </ul>
+
+    <blockquote>
+      Tips: <span class="cmd">ctrl + option(alt) + p</span> to toggle show/hide.
+    </blockquote>
+
+    <div class="footer">
+      <a class="github-button" href="https://github.com/mazrica/chrome-github-points" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star mazrica/chrome-github-points on GitHub">Star</a>
+      <a class="github-button" href="https://github.com/mazrica/chrome-github-points/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue mazrica/chrome-github-points on GitHub">Issue</a>
+    </div>
+  </div>
+
+  <script src="scripts/popup.bundle.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

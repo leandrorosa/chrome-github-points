@@ -1,0 +1,10 @@
+.idea/
+.vs/
+.vscode/
+.nyc_output/
+.tmp/
+coverage/
+node_modules/
+dist/
+*.log
+.DS_Store
