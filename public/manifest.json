@@ -3,7 +3,7 @@
   "name": "GitHub Points",
   "short_name": "GitHub Points",
   "description": "Add storypoints feature to GitHub",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "nanopx",
   "browser_action": {
     "default_popup": "popup.html"

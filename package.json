@@ -2,7 +2,7 @@
   "name": "github-points-extension",
   "description": "Chrome extension to add storypoints feature to GitHub",
   "author": "Atsushi Yoshitake <atsushi.yoshitake@mazrica.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "homepage": "https://github.com/mazrica/chrome-github-points#readme",
   "repository": "https://github.com/mazrica/chrome-github-points",
