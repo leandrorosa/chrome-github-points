@@ -2,7 +2,7 @@
 
 Chrome extension to add storypoints feature to GitHub.
 
-[Chrome Webstore](https://chrome.google.com/webstore/detail/github-points/gblajdemjpibbajhifkbbngkllejempi)
+[Chrome Web Store](https://chrome.google.com/webstore/detail/github-points/gblajdemjpibbajhifkbbngkllejempi)
 
 ## Features
 
