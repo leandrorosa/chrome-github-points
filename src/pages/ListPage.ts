@@ -52,24 +52,13 @@ export default class ListPage extends PjaxPage {
   public initialize() {
     const $container = this.getElement()
     const $subnav: HTMLDivElement = this.getSubnavElement()
-    const $rows = this.getRows()
 
     this.resultsBar = new ResultsBar()
-    this.rows = $rows.map($row => {
-      const row = new IssueRow($row)
-      row.hidePoints()
-      return row
-    })
-
     this.resultsBar.hide()
     this.resultsBar.appendTo($subnav)
     this.handleTitleMutations()
 
-    getConfig(({ hidePointBadge = false, hidePointSummary = false }) => {
-      if (!hidePointBadge) {
-        this.rows.forEach(row => row.showPoints())
-      }
-
+    getConfig(({ hidePointSummary = false }) => {
       if (!hidePointSummary) {
         this.resultsBar.show()
       }
@@ -101,8 +90,21 @@ export default class ListPage extends PjaxPage {
   }
 
   public handleTitleMutations = () => {
+    const $rows = this.getRows()
+    this.rows = $rows.map($row => {
+      const row = new IssueRow($row)
+      row.hidePoints()
+      return row
+    })
+
     const resultPoints = this.addPointsToTitles()
     this.resultsBar.setPoints(resultPoints)
+
+    getConfig(({ hidePointBadge = false }) => {
+      if (!hidePointBadge) {
+        this.rows.forEach(row => row.showPoints())
+      }
+    })
   }
 
   public getRows() {
