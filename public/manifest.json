@@ -2,7 +2,7 @@
   "manifest_version" : 2,
   "name": "GitHub Points",
   "short_name": "GitHub Points",
-  "description": "Add points to GitHub",
+  "description": "Add storypoints feature to GitHub",
   "version": "0.1.0",
   "author": "nanopx",
   "browser_action": {
